@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         webView.settings.lightTouchEnabled = true
         webView.settings.javaScriptEnabled = true
         webView.settings.setSupportMultipleWindows(true)
+        webView.settings.javaScriptCanOpenWindowsAutomatically = true
+
         webView.loadUrl("file:///android_asset/www/index.html")
         webView.webChromeClient = object : WebChromeClient() {
             override fun onCreateWindow(
